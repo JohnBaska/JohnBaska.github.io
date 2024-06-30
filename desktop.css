@@ -1,0 +1,358 @@
+/*  Configurações Gerais */
+    .my-CV{
+        font-family:  Arial, Helvetica, sans-serif;
+        background-color: rgb(51, 168, 51); 
+        width: 1300px;
+        position: absolute;
+        top: 7%;
+        left: 15%;
+        text-align: center;
+    }
+
+    h1, h3, h4{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    ul{
+        list-style-type: none;
+    }
+
+    .apresentation p span{
+        display: flex;
+        justify-content: center;
+    }
+
+    .professional-goal p span{
+       display: flex;
+       justify-content: center;
+    }
+
+    .menu-navegacao li{
+            display: inline-block;
+            margin-right: 20px;     
+    }
+
+    .menu-navegacao li a{
+        text-decoration: none;
+        cursor: pointer;
+        color: black;
+    } 
+
+    .menu-navegacao li a:hover{
+        font-weight: bold;
+    }
+
+    .menu-navegacao{
+        background-color: rgb(18, 177, 177);
+        position: fixed;
+        top: 0;
+        width: 71%;
+        padding: 10px 0;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    main{
+        position: relative;
+        padding: 0;
+        height: 1000px;
+        border: 2px solid purple;
+        background-color: rgb(36, 36, 36);
+    }
+
+    footer{
+        border: 3px solid #1c6161;
+        padding: none;
+        margin: none;
+        background-color: #1c6161;
+        position: relative;
+        bottom: 0px;
+    }
+
+    
+
+    .text{
+        color: rgb(0, 0, 0);
+    }
+
+/*-----------------------------------------HEADER-------------------------------------------------*/
+
+    .email div{
+        background-image: url(images/email.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 90%;
+        position: absolute;
+        top: 87%;
+        left: 95%;
+        width: 40px;
+        height: 40px;
+    }
+
+    .email :hover{
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    }
+    .text {
+        opacity: 0.7;
+        
+    }
+
+    .text h1{
+        font-size: 60px;
+    }
+
+    /* Animação para o efeito de digitação */
+    @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+    }
+
+    /* Animação para o cursor piscando */
+    @keyframes blink-caret {
+        from, to { border-color: transparent; }
+        50% { border-color: orange; }
+    }
+
+    /* Definindo o estilo para o efeito de digitação */
+    .text p{
+        overflow: hidden; /* Esconde o texto que está fora do contêiner */
+        border-right: .10em solid orange; /* Adiciona um cursor piscando */
+        white-space: nowrap; /* Evita quebra de linha */
+        margin: 0 auto; /* Centraliza o texto */
+        letter-spacing: .10em; /* Espaçamento entre letras */
+        animation: typing 3.5s steps(40, end), blink-caret .5s step-end;
+    }
+
+
+    /* Banner Rotativo*/
+
+        .banner {
+            background-color: white;
+            width: 100%;
+            height: 400px; /* altura do banner */
+            overflow: hidden; /* esconde conteúdo além das bordas */
+            position: relative; /* necessário para o posicionamento absoluto dos slides */
+        }
+
+        @keyframes rotate {
+            8% {
+                opacity: 0.3;
+            }
+            33% {
+                opacity: 0.9;
+            }
+            40% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .banner .img1{
+            background-image: url(images/biblia.png);
+            animation: rotate 30s infinite;
+        }
+
+        .banner .img2{
+            background-image: url(images/esportes.png);
+            animation: rotate 30s infinite 10s; /* delay de 3 segundos para começar a segunda imagem */
+        }
+
+        .banner .img3{
+            background-image: url(images/programacao.png);
+            animation: rotate 30s infinite 20s; 
+        }
+
+
+        .slide {
+            background-repeat: no-repeat;
+            position: absolute; 
+            width: 100%; /*largura do slide */
+            height: 100%;
+            top: 0; /* alinha o slide ao topo */
+            left: 0; /* alinha o slide à esquerda */
+            opacity: 0; /* torna o slide inicialmente invisível */
+            transition: opacity 1s ease-in-out; /* animação de transição de opacidade */
+            background-position: center;
+        }
+
+        .slide.active {
+            opacity: 1; /* torna o slide ativo visível*/
+        }
+
+        .conteúdo{
+            display: flex; /* Torna o container um flex container */
+            justify-content: space-around; /* Alinha os itens com espaçamento uniforme */
+            align-items: center; /* Centraliza verticalmente os itens */
+            flex-wrap: wrap; 
+        }
+
+        .conteúdo section{
+            height: 200px;
+            padding: 2px;
+            width: 300px;
+            margin: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .conteúdo a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .conteúdo a :hover{
+            font-size: 20px;
+        } 
+
+/*-----------------------------------------BODY-------------------------------------------------*/
+
+    /* Especificas da parte de Educação */
+
+        .education{
+            border-top: 1px solid;
+        }
+
+        .education .div-1{
+            position: relative;
+            top: -16px;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .conteúdo section{
+            /* colocar foto das escolas de fundos */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .institution-1{
+            background-image: url("images/moyses_kalil.png");
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .institution-2{
+            background-image: url("images/pedro_guerra.png");
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        }
+
+        h3{
+            font-size: 2em;
+        }
+
+        .institution-3{
+            background-image: url("images/coltec.png");
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        }
+
+    /* Especificas da parte de Habilibadades */
+
+        .skills{
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            margin: 0;
+            height: 373px;
+            top: -64px;
+            bottom: 100px;
+        }
+
+        .skills h3{
+            background-color: rgba(255, 255, 255, 0.7);
+            position: relative;
+            bottom: -4%;
+        }
+
+        .conteudo{
+            display: flex; /* Torna o container um flex container */
+            justify-content: flex-start; 
+            align-items: center; 
+            flex-wrap: wrap; 
+            position: relative;
+            top: 20px;
+            width: 100%;
+            height: 250px;   
+        }
+
+        .contorno{
+            background-color: rgba(255, 255, 255, 0.7);
+            height: 300px;  
+            position: relative;
+            top: -4.4%;  
+        }
+
+        .mains, .learning, .pessoais{
+            width: 32.85%;
+            height: 100%;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .mains ul, .learning ul, .pessoais ul{
+            position: relative;
+            top: -6%;
+        }
+
+        .skills ul{
+            text-align: center; 
+        }
+
+        .skills li{
+            width: 110%;
+            position: relative;
+            left: -11%;
+            height: 65px;
+            border: 1px solid black;
+        }
+
+        
+
+        .skills h4{
+            position: relative;
+            top: -10%;
+        }
+
+    /* Especificas da parte de Experiências */
+
+        .professional-experiences{
+            margin: 0;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            top: -32px; 
+        }
+
+        .professional-experiences div{
+            height: 290px;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .experience-1{
+            background-image: url("https://static.wixstatic.com/media/6b051c_ffb6ee11f903493697ea36958cd59c50~mv2.jpg/v1/fill/w_640,h_426,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/6b051c_ffb6ee11f903493697ea36958cd59c50~mv2.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            
+        }
+
+        .experience-1 div{
+            background-color: rgba(255, 255, 255, 0.3);
+            width: 103%;
+            height: 103%;
+            position: relative;
+            top: -11.5%;
+            left: -2%;
+        }
+
+        a :hover{
+            background-size: 125%;rgba(255, 255, 255, 0.7)
+        }
+
+    

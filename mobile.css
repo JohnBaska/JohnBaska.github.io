@@ -1,0 +1,98 @@
+@media (max-width:  1000px) {
+    /* Estilos específicos para telas menores */
+    .menu-navegacao li{
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .menu-navegacao li a{
+        color: white;
+        width: 200px
+    }
+    .menu-navegacao{
+        width: 100%;
+    }
+    .menu-navegacao li a:hover{
+        box-shadow: 0 0 8px white;
+        color: white;
+    }
+
+    main{
+        border: 3px solid orange;
+        height: 2080px;
+    }   
+
+    footer{
+        border: 3px solid red;
+        position: relative;
+        top: 100%;
+    }
+
+    .my-CV{
+        width: 100%;
+        position: absolute;
+        left: 0px;
+        top: 12%;
+    }
+
+    body{
+        background-color: black;
+    }
+/* -----------------------HEADER--------------------- */
+    .email div{
+        position: absolute;
+        left: 90%;
+    }
+
+    .apresentation p span{
+        display: flex;
+        justify-content: center;
+    }
+
+    .professional-goal p span{
+       display: flex;
+       justify-content: center;
+    }
+
+    .conteudo{
+        display: block; 
+        margin: 0;  
+    }
+
+    .mains, .pessoais, .learning{
+        position: absolute;
+        width: 100%;
+        height: 0px;
+    }
+
+    .mains{
+        top: 50%;
+    }
+
+    .pessoais{
+        top: 150%;
+    }
+
+    .learning{
+        top: 350%;
+    }
+
+    .mains ul, .pessoais ul, .learning ul{
+        position: relative;
+        right: -8%;
+        width: 80%;
+    }   
+
+    .skills div{
+        height: 1150px
+    }
+
+    .skills li{
+        border: 3px solid black;
+        width: 110%;
+        position: relative;
+        left: -10%;
+        height: 65px;
+    }
+
+}
